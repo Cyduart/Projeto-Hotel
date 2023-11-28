@@ -5,6 +5,7 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Data {
     private int dia;
     private int mes;
