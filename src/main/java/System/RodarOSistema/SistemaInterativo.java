@@ -16,8 +16,8 @@ public class SistemaInterativo {
 
         boolean finalizarReserva = false;
 
-        do {
-            // Entrada de informações da reserva
+        while (!finalizarReserva) {
+
             System.out.println("Informe os detalhes da reserva:");
             System.out.print("Código da Reserva: ");
             reserva.setCodigo(scanner.nextLine());
@@ -44,9 +44,13 @@ public class SistemaInterativo {
 
 
             System.out.println("Informe os detalhes do quarto:");
-            System.out.print("Código do Quarto: ");
+            System.out.print("Número do Quarto: ");  // Alteração aqui
             quarto.setCodigo(scanner.next());
-            System.out.print("Tipo do Quarto:\n1 - SINGLE\n2 - DOUBLE\n3 - SUITE\nEscolha o tipo de Quarto (1, 2 ou 3): ");
+            System.out.println("Tipo do Quarto:");
+            System.out.println("1 - SINGLE");
+            System.out.println("2 - DOUBLE");
+            System.out.println("3 - SUITE");
+            System.out.print("Escolha o tipo de Quarto (1, 2 ou 3): ");
             int tipoQuartoEscolhido = scanner.nextInt();
 
             TipoQuarto tipoQuarto;
@@ -92,7 +96,6 @@ public class SistemaInterativo {
             System.out.print("E-mail do Hotel: ");
             hotel.setEmail(scanner.next());
 
-
             hotel.getQuartos().add(quarto);
             sistema.getReservas().add(reserva);
             sistema.getHotels().add(hotel);
@@ -107,10 +110,10 @@ public class SistemaInterativo {
 
             if (respostaFinalizar.equalsIgnoreCase("S")) {
                 finalizarReserva = true;
-            } else {
+
 
                 System.out.println("\n===== Detalhes da Reserva =====");
-                System.out.printf("Código da Reserva: %s\n", reserva.getCodigo());
+                System.out.printf("\nCódigo da Reserva: %s\n", reserva.getCodigo());
                 System.out.printf("Nome do Cliente: %s\n", reserva.getNome());
                 System.out.printf("Telefone do Cliente: %s\n", reserva.getTelefone());
                 System.out.printf("E-mail do Cliente: %s\n", reserva.getEmail());
@@ -118,16 +121,14 @@ public class SistemaInterativo {
                 System.out.printf("Check-Out: %s\n", reserva.getCheckOut());
 
                 System.out.println("\n===== Detalhes do Quarto =====");
-                System.out.printf("Código do Quarto: %s\n", quarto.getCodigo());
+                System.out.printf("\nNúmero do Quarto: %s\n", quarto.getCodigo());
                 System.out.printf("Descrição do Quarto: %s\n", quarto.getDescricao());
                 System.out.printf("Preço do Quarto: %.2f\n", quarto.getPreco());
+            } else {
 
+                scanner.nextLine();
             }
-
-
-            scanner.nextLine();
-        } while (!finalizarReserva);
-
+        }
 
         scanner.close();
     }
