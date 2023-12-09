@@ -1,4 +1,21 @@
+#Colaboradores:
+
+Cayo Duarte Vidal - 04133717
+
+Marcus Vinicius dos Anjos Guerreiro Filho - 04125104
+
+Allan Peterson Vaz Santos - 04134982
+
+Jamile de Castro Silva - 04130013
+
+Vitor Luiz Marvão Soares - 04133352
+
+Nilson dos santos Silva - 04131133
+
 # Diagrama do projeto
+
+ https://app.diagrams.net/#G108BlAWA-rCeA3DXdFMUhIu4cf8ALR1LB
+
 
 # Projeto-Hotel
 
